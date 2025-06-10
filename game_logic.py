@@ -1,4 +1,4 @@
-import random    # # Module for selecting a random word
+import random    # Module for selecting a random word
 import snowman    # Module with ASCII art for the snowman levels
 import ascii_art    # Module with the list of words and start of game
 
@@ -48,12 +48,12 @@ def play_game():
         guess = input('Guess a letter: ').lower()
         print()
 
-        # check if the input is empty
+        # Check if the input is empty
         if guess == '':
             print(f'Your input was empty, try again!\n')
             continue
 
-        # check if the input is a single letter
+        # Check if the input is a single letter
         elif len(guess) > 1:
             print(f'Your input was too long! Please enter a single letter.\n')
             continue
@@ -78,9 +78,6 @@ def play_game():
             print(f'❌ Letter "{guess}" is not in the secret word!')
             display_game_state(count_of_mistakes, secret_word, guessed_letters)
 
-    # display message if the game was lost
+    # Display message if the game was lost
     if not won:
         print(f'☹️ Game Over! The word was: {secret_word}\n')
-
-        # replay
-
